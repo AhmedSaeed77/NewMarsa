@@ -115,6 +115,7 @@ Route::group(['middleware' => 'prevent-back-history'], function () {
                 Route::post('/updateimage', [ActivityController::class, 'updateimage'])->name('updateimage');
             });
             
+            
             Route::group(['prefix' => 'advisor', 'as' => 'advisor.'], function () {
                 Route::get('/', [AdvisorController::class, 'all'])->name('all');
                 Route::get('/create', [AdvisorController::class, 'create'])->name('createadvisor');
